@@ -27,6 +27,7 @@ class Deck(object):
     def __init__(self): # Don't need any input to create a deck of cards
         # This working depends on Card class existing above
         self.cards = []
+        print()
         for suit in range(4):
             for rank in range(1,14):
                 card = Card(suit,rank)
@@ -62,7 +63,7 @@ class Deck(object):
     def deal_hand(self, hand_size):
         hand_cards = []
         for i in range(hand_size):
-            hand_cards.append(self.pop_card(i)) 
+            hand_cards.append(self.pop_card()) 
         return hand_cards
 
 
